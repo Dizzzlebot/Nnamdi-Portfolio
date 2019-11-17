@@ -1,53 +1,128 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+.body{
+    font-size: 20px;
+    overflow-x: hidden;
+    font-family: 'Flamenco', cursive;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+header{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
 }
-html,body {
-    height: 100%;
-    line-height: 1;
-    color: #ffffff;
-    background-color: #000000;
-    font-family: 'PT Sans Narrow', sans-serif;
+
+.clearfix:after{
+    content: ".";
+    visibility: hidden;
+    display: block;
+    height: 0px;
+    clear: both;
+}
+
+.row{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.logo{
+    height: 120px;
+    width: auto;
+    float: left;
+    margin-top: 20px; 
+}
+.main-nav{
+    float: right;
+    margin-top: 60px;
+}
+
+.main-nav li{
+    display: inline-block;
+    list-style: none;
+    margin-left: 40px;
+
+}
+
+.main-nav li a{
+    padding: 5px 0;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 100;
+
+}
+
+.main-nav li a:hover{
+    border-bottom: 2px solid #55ec76;
+}
+
+.main-content-header{
+    color:#fff;
+    width: 1180px;
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform:(translate(-50%, -50%));
+   /* border: 1px solid red;*/
+}
+
+h1{
+    color:#fff;
+    word-spacing: 5px;
+    font-size: 220%;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: lighter;
+
+}
+
+.btn{
+    color:green;
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 200px;
+    transition: background-color 0.2s, boder 0.2s, color 0.2
     
 }
-ol, ul {
-	list-style: none;
+
+.btn-full {
+    background-color:transparent ;
+    color: #55ec76;
+    margin-right: 15px;
+    border: 1px solid #55ec76;
 }
-blockquote, q {
-	quotes: none;
+
+.btn-full:hover{
+    background-color: #fff;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+.btn-nav{
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+
+.colorchange{
+    animation: colorchangemyportfolio 30s infinite;
 }
+
+@keyframes colorchangemyportfolio{
+    0%{color:darkgreen;}
+    25%{color:palevioletred;}
+    50%{color:darkblue;}
+    100%{color:lime;}
+
+}
+
